@@ -17,14 +17,21 @@
 # Alumno:
 # Aquí copiar la función "generar_invitados"
 # ya elaborada
-
+def generar_invitados():
+    lista = []
+    for invitado in range(3):
+        invitado = input("ingrese invitado")
+        lista.append(invitado)
+    return lista
 # --------------------------------
 
 # --------------------------------
 # Alumno:
 # Aquí copiar la función "ordenar"
 # ya elaborada
-
+def ordenar(lista):
+    orden = sorted(lista)
+    return orden
 # --------------------------------
 
 if __name__ == '__main__':
@@ -43,14 +50,15 @@ if __name__ == '__main__':
     #    Almacenar el retorno en "lista_invitados"
 
     # lista_invitados = generar_invitados()
-
+    lista_invitados = generar_invitados()
     # 2) Luego ordenar la lista de invitados con "ordenar"
     #    --> Pasar como parámetro la "lista_invitados"
     #    --> Retornar la lista de invitados ordenada
     #    --> Almacenar el retorno en "lista_invidatos_ordenada"
 
     # lista_invidatos_ordenada = ordenar(lista_invitados)
+    lista_invidatos_ordenada = ordenar(lista_invitados)
 
     # Imprimir en pantalla "lista_invidatos_ordenada":
-
+    print(lista_invidatos_ordenada)
     print("terminamos")

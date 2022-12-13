@@ -19,6 +19,13 @@
 # el nombre de tres invitados
 # def generar_invitados():
 
+def generar_invitados():
+    lista = []
+    for invitado in range(3):
+        invitado = input("ingrese invitado")
+        lista.append(invitado)
+    return lista
+
 
 # --------------------------------
 
@@ -49,6 +56,10 @@ if __name__ == '__main__':
 
     # lista_invitados = generar_invitados()
 
+    lista_invitados = generar_invitados()
+
     # Imprimir en pantalla "lista_invitados":
+
+    print(lista_invitados)
 
     print("terminamos")

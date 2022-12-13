@@ -1,4 +1,3 @@
-# CODE:35
 # Funciones [Python]
 # Ejercicios de profundización
 
@@ -32,7 +31,6 @@ por parámetro a la función) se repite en la lista
 (también pasada por parámetro)
 - Primer parámetro --> número a buscar y contar
 - Segundo parámetro --> la lista de números
-
 Para saber cuantas veces se repiten el elemento pasado
 en la lista pueden usar el método nativo de list "count"
 '''
@@ -40,12 +38,21 @@ en la lista pueden usar el método nativo de list "count"
 # --------------------------------
 # Aquí copiar la función "lista_aleatoria"
 # ya elaborada en el ejercicio anterior
+def lista_aleatoria(inicio, fin, cantidad):
+    lista = []
+    for i in range(cantidad):
+        numero = random.randint(inicio, fin)
+        lista.append(numero)
 
-
+    return lista 
 # --------------------------------
+
 
 # --------------------------------
 # Aquí dentro definir la función contar
+def contar(lista, buscado):
+    busca = lista.count(buscado)
+    return busca
 
 
 # --------------------------------
@@ -53,21 +60,29 @@ en la lista pueden usar el método nativo de list "count"
 if __name__ == '__main__':
     print("Bienvenidos a otra clase de Inove con Python")
     
+    inicio = 0
+    fin = 10
+    cantidad = 5
+
     # Alumno: Utilizar la función "lista_aleatoria"
     # para que genere una lista de 5 números que esten comprendidos
     # entre los números 1 al 6 inclusive
 
-    # lista_numeros = lista_aleatoria(...)
+    # lista_numeros = lista_aleatoria()
+    lista_numeros = lista_aleatoria(inicio, fin, cantidad)
 
     # Imprimir en pantalla "lista_numeros" que tendrá
     # los valores retornado por la función "lista_aleatoria":
 
     # print(lista_numeros)
+    print(lista_numeros)
 
     # Luego quiero averiguar cuantas veces se repite el numero 3
     # en la lista aleatoria creada
+    #buscado = 3
     # cantidad_tres = contar(lista_numeros, 3)
+    cantidad_tres = contar(lista_numeros, 3)
 
     # print(cantidad_tres)
-
+    print(cantidad_tres)
     print("terminamos")
